@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mr. Machado - Comunicação Visual
 
-## Getting Started
+🎨 **Site profissional para empresa de comunicação visual em Jaboti, Paraná**
 
-First, run the development server:
+## 📋 Sobre o Projeto
+
+Site moderno e responsivo desenvolvido em Next.js para a Mr. Machado Comunicação Visual, especializada em fachadas, letreiros luminosos, placas, adesivos e projetos especiais.
+
+## ✨ Funcionalidades
+
+- **Homepage impactante** com hero section e chamadas para ação
+- **Catálogo de serviços** com páginas específicas para cada tipo
+- **Portfolio filtrado** por categorias
+- **Formulário de contato** integrado com WhatsApp
+- **Rastreamento de origem** para cada lead via WhatsApp
+- **Design responsivo** para todos os dispositivos
+- **SEO otimizado** para busca local
+
+## 🚀 Tecnologias
+
+- **Next.js 14** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **Lucide React** - Ícones
+- **Montserrat** - Fonte Google
+
+## 📱 Integração WhatsApp
+
+Cada botão de contato rastreia a origem do cliente:
+- Seção específica do site
+- Tipo de serviço de interesse
+- Página de origem
+
+## 🎯 Serviços Destacados
+
+- **Fachadas** (ACM, Acrílico, Vidro)
+- **Letreiros Luminosos** (LED, Neon)
+- **Placas e Banners**
+- **Adesivos Personalizados**
+- **Veículos** (Plotagem, Envelopamento)
+- **Projetos Especiais**
+
+## 📍 Localização
+
+**Jaboti, Paraná** - Atendemos toda a região
+
+## 📞 Contatos
+
+- **WhatsApp:** (43) 99808-8888
+- **Email:** contato@mrmachado.com.br
+- **Instagram:** [@mrmachadocv](https://instagram.com/mrmachadocv)
+
+## 🛠 Como Executar
 
 ```bash
+# Instalar dependências
+npm install
+
+# Executar em desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build para produção
+npm run build
+
+# Executar produção
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Estrutura do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/                 # App Router do Next.js
+│   ├── servicos/       # Páginas específicas de serviços
+│   └── globals.css     # Estilos globais
+├── components/         # Componentes React
+│   ├── Header.tsx     # Navegação principal
+│   ├── Hero.tsx       # Seção hero
+│   ├── Services.tsx   # Grid de serviços
+│   ├── Portfolio.tsx  # Galeria filtrada
+│   ├── About.tsx      # Sobre a empresa
+│   ├── Contact.tsx    # Formulário de contato
+│   ├── Footer.tsx     # Rodapé
+│   └── WhatsAppButton.tsx # Botão com rastreamento
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Design
 
-## Learn More
+- **Cores principais:** Azul (#1e40af), Amarelo (#fbbf24), Verde (#16a34a)
+- **Tipografia:** Montserrat
+- **Estilo:** Moderno, profissional e confiável
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Desenvolvido com ❤️ para Mr. Machado Comunicação Visual**
