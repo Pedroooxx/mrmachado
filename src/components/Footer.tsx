@@ -128,9 +128,8 @@ export default function Footer() {
         {/* Testimonial */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="bg-gray-800 rounded-2xl p-6">
-            <div className="text-center">
-              <p className="text-lg text-gray-300 italic mb-4">
-                "Excelente trabalho! Fizeram a fachada da minha loja e o resultado superou minhas expectativas. Recomendo muito!"
+            <div className="text-center">              <p className="text-lg text-gray-300 italic mb-4">
+                &ldquo;Excelente trabalho! Fizeram a fachada da minha loja e o resultado superou minhas expectativas. Recomendo muito!&rdquo;
               </p>
               <p className="text-yellow-400 font-semibold">
                 - Maria Silva, Proprietária da Boutique Elegance
@@ -144,8 +143,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm">
               © 2024 Mr. Machado Comunicação Visual. Todos os direitos reservados.
-            </div>
-            <div className="text-gray-400 text-sm mt-4 md:mt-0">
+            </div>            <div className="text-gray-400 text-sm mt-4 md:mt-0">
               Desenvolvido com ❤️ em Jaboti, PR
             </div>
           </div>

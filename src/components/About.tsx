@@ -1,4 +1,5 @@
 import { Award, Clock, MapPin, Users, Zap, Heart } from "lucide-react";
+import Image from "next/image";
 import WhatsAppButton from "./WhatsAppButton";
 
 const features = [
@@ -80,11 +81,12 @@ export default function About() {
 
           {/* Right Content */}
           <div className="relative">
-            {/* Main Image */}
-            <div className="relative z-10 bg-white p-4 rounded-2xl shadow-2xl">
-              <img 
+            {/* Main Image */}            <div className="relative z-10 bg-white p-4 rounded-2xl shadow-2xl">
+              <Image 
                 src="/api/placeholder/500/400" 
                 alt="Equipe Mr. Machado"
+                width={500}
+                height={400}
                 className="w-full h-80 object-cover rounded-xl"
               />
             </div>
