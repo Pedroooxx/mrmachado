@@ -180,7 +180,7 @@ export default function Portfolio() {
           <WhatsAppButton
             message="Olá! Tenho um projeto de comunicação visual e gostaria de conversar."
             source="portfolio-cta"
-            className="btn-primary bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black" // Added dark mode classes, assuming btn-primary might not cover it or needs override
+            className="btn-primary mx-auto bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black" // Added dark mode classes, assuming btn-primary might not cover it or needs override
           >
             Vamos Conversar
           </WhatsAppButton>
