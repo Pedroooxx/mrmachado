@@ -62,7 +62,7 @@
 
   /* Responsive spacing */
   .section-padding {
-    @apply py-16 sm:py-24 lg:py-32;
+    @apply py-12 sm:py-16 lg:py-20 xl:py-24;
   }
 
   .section-padding-small {
@@ -85,7 +85,7 @@
 
   /* Grid responsive utilities */
   .grid-responsive-2 {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16;
   }
 
   .grid-responsive-3 {
@@ -99,6 +99,19 @@
 
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Responsive form styles */
+  .form-input-responsive {
+    @apply w-full px-4 py-3 sm:px-5 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm sm:text-base transition-all duration-200;
+  }
+
+  .form-label-responsive {
+    @apply block text-sm sm:text-base font-medium text-gray-900 mb-2 sm:mb-3;
+  }
+
+  .button-responsive {
+    @apply py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-medium rounded-full transition-all duration-200;
   }
 }
 

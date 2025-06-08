@@ -68,22 +68,21 @@ Enviei este formulário através do site.`;
       [e.target.name]: e.target.value
     });
   };
-
   return (
-    <section id="contato" className="section-padding bg-gray-50">
-      <div className="container-responsive">
+    <section id="contato" className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-display-large font-light text-gray-900 mb-6 sm:mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 mb-6 sm:mb-8">
             <span className="font-bold">Contato</span>
           </h2>
-          <p className="text-body-large text-gray-600 max-w-2xl mx-auto font-light">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto font-light">
             Pronto para dar vida ao seu projeto? Entre em contato conosco e descubra 
             como podemos transformar sua comunicação visual.
           </p>
         </div>
 
-        <div className="grid-responsive-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
           {/* Contact Info */}
           <div className="space-y-8 sm:space-y-10 order-2 lg:order-1">
             <div>
@@ -124,36 +123,11 @@ Enviei este formulário através do site.`;
                 );
               })}
             </div>
-
-            {/* Quick Actions */}
-            <div className="pt-6 sm:pt-8 border-t border-gray-200">
-              <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">
-                Ações Rápidas
-              </h4>
-              <div className="space-y-3 sm:space-y-4">
-                <WhatsAppButton
-                  message="Olá! Gostaria de solicitar um orçamento para comunicação visual."
-                  source="contato-orcamento"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 sm:py-4 rounded-full font-medium transition-colors flex items-center justify-center text-sm sm:text-base"
-                >
-                  <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Solicitar Orçamento via WhatsApp
-                </WhatsAppButton>
-                
-                <a 
-                  href="tel:+5543998088888"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 sm:py-4 rounded-full font-medium transition-colors flex items-center justify-center text-sm sm:text-base"
-                >
-                  <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Ligar Agora
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
           <div className="order-1 lg:order-2">
-            <div className="bg-white card-responsive shadow-sm">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-6 sm:mb-8">
                 Envie sua Mensagem
               </h3>
