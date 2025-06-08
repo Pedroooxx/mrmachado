@@ -5,6 +5,7 @@ import Portfolio from "@/components/Portfolio";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingThemeToggle from "@/components/FloatingThemeToggle";
 
 export default function HomePage() {
   return (
@@ -14,8 +15,8 @@ export default function HomePage() {
       <Services />
       <Portfolio />
       <About />
-      <Contact />
-      <Footer />
+      <Contact />      <Footer />
+      <FloatingThemeToggle />
     </div>
   );
 }
