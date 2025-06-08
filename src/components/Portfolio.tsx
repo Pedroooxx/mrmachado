@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import { useState } from "react";
 import { ExternalLink, Eye } from "lucide-react";
 import Image from "next/image";

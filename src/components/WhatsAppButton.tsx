@@ -5,30 +5,24 @@ import { ReactNode } from "react";
 interface WhatsAppButtonProps {
   message: string;
   source: string;
-  children: ReactNode;
   className?: string;
+  children: ReactNode;
 }
 
-export default function WhatsAppButton({ message, source, children, className = "" }: WhatsAppButtonProps) {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "5543998088888";
-    const encodedMessage = encodeURIComponent(`${message}\n\n*Origem:* ${source}`);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    // Track the click (for future analytics)
-    if (typeof window !== 'undefined') {
-      console.log(`WhatsApp click from: ${source}`);
-      // Here you would send analytics data to your backend
-    }
-    
+export default function WhatsAppButton({ 
+  message, 
+  source, 
+  className = "", 
+  children 
+}: WhatsAppButtonProps) {
+  const handleClick = () => {
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/5543998088888?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <button 
-      onClick={handleWhatsAppClick}
-      className={className}
-    >
+    <button onClick={handleClick} className={className}>
       {children}
     </button>
   );
