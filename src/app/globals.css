@@ -33,6 +33,73 @@
   .animation-delay-4000 {
     animation-delay: 4s;
   }
+
+  /* Responsive container utilities */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Responsive text sizes */
+  .text-display-large {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+  }
+
+  .text-display-medium {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  .text-display-small {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .text-body-large {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .text-body-medium {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+
+  /* Responsive spacing */
+  .section-padding {
+    @apply py-16 sm:py-24 lg:py-32;
+  }
+
+  .section-padding-small {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* Mobile-first button styles */
+  .btn-primary {
+    @apply bg-black hover:bg-gray-800 text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center text-sm sm:text-base;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center text-sm sm:text-base;
+  }
+
+  /* Card responsive styles */
+  .card-responsive {
+    @apply p-6 sm:p-8 lg:p-10 rounded-xl sm:rounded-2xl lg:rounded-3xl;
+  }
+
+  /* Grid responsive utilities */
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16;
+  }
+
+  .grid-responsive-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10;
+  }
+
+  /* Safe area for mobile devices */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 /* Custom animations */

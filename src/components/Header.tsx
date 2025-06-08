@@ -7,18 +7,16 @@ import { Phone, Instagram, Mail, Menu, X } from "lucide-react";
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-md bg-white/90">
+  return (    <header className="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-md bg-white/90">
       {/* Main Header */}
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-light text-gray-900 hover:text-blue-600 transition-colors">
+          <Link href="/" className="text-xl sm:text-2xl font-light text-gray-900 hover:text-blue-600 transition-colors">
             <span className="font-bold">Mr. Machado</span>
             <span className="block text-xs font-normal text-gray-600 tracking-wider">COMUNICAÇÃO VISUAL</span>
           </Link>
-          
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-12">
+            {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8 xl:space-x-12">
             <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Home
             </Link>
@@ -37,13 +35,14 @@ export default function Header() {
           </nav>
 
           {/* CTA Button & Mobile Menu */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <a 
               href="tel:+5543998088888" 
-              className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-colors items-center"
+              className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-medium transition-colors items-center text-sm lg:text-base"
             >
-              <Phone className="mr-2 h-4 w-4" />
-              (43) 99808-8888
+              <Phone className="mr-1 lg:mr-2 h-4 w-4" />
+              <span className="hidden lg:inline">(43) 99808-8888</span>
+              <span className="lg:hidden">Ligar</span>
             </a>
             
             {/* Mobile Menu Button */}

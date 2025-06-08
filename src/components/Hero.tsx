@@ -17,61 +17,60 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
-      
-      {/* Main Content */}
+        {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             {/* Main Content */}
             <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center justify-center space-x-2 text-yellow-400">
+              <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+                <div className="flex items-center justify-center space-x-1 sm:space-x-2 text-yellow-400">
                   {[1,2,3,4,5].map((star) => (
-                    <Star key={star} className="h-5 w-5 fill-current" />
+                    <Star key={star} className="h-4 w-4 sm:h-5 sm:w-5 fill-current" />
                   ))}
-                  <span className="text-sm ml-2 text-gray-600">+500 clientes satisfeitos</span>
+                  <span className="text-xs sm:text-sm ml-2 text-gray-600">+500 clientes satisfeitos</span>
                 </div>
                 
-                <h1 className="text-5xl lg:text-8xl font-light leading-tight text-gray-900">
-                  Sua <span className="font-bold">Comunicação Visual</span><br />
-                  em <span className="text-blue-600 font-bold">Destaque</span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light leading-tight text-gray-900">
+                  Sua <span className="font-bold">Comunicação Visual</span><br className="hidden sm:block" />
+                  <span className="sm:hidden"> </span>em <span className="text-blue-600 font-bold">Destaque</span>
                 </h1>
                 
-                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-light">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-light px-4 sm:px-0">
                   Transformamos suas ideias em soluções visuais impactantes. 
                   Especialistas em fachadas, letreiros, placas e muito mais em Jaboti, Paraná.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16 px-4 sm:px-0">
                 <WhatsAppButton 
                   message="Olá! Vim através do site e gostaria de um orçamento para comunicação visual."
                   source="hero"
-                  className="bg-black hover:bg-gray-800 text-white px-12 py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center group"
+                  className="bg-black hover:bg-gray-800 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center group text-sm sm:text-base"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Solicitar Orçamento
                 </WhatsAppButton>
                 
-                <button className="border-2 border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white px-12 py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center group">
+                <button className="border-2 border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center group text-sm sm:text-base">
                   Ver Portfolio
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto px-4 sm:px-0">
                 <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">15+</div>
-                  <div className="text-sm text-gray-600 font-medium">Anos de Experiência</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-1 sm:mb-2">15+</div>
+                  <div className="text-xs sm:text-sm text-gray-600 font-medium">Anos de Experiência</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">500+</div>
-                  <div className="text-sm text-gray-600 font-medium">Projetos Realizados</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-1 sm:mb-2">500+</div>
+                  <div className="text-xs sm:text-sm text-gray-600 font-medium">Projetos Realizados</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">100%</div>
-                  <div className="text-sm text-gray-600 font-medium">Clientes Satisfeitos</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-1 sm:mb-2">100%</div>
+                  <div className="text-xs sm:text-sm text-gray-600 font-medium">Clientes Satisfeitos</div>
                 </div>
               </div>
             </div>

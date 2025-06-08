@@ -1,162 +1,161 @@
+"use client";
+
 import Link from "next/link";
-import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, MessageCircle } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
+
+const footerLinks = {
+  services: [
+    { name: "Fachadas", href: "/servicos#fachadas" },
+    { name: "Letreiros Luminosos", href: "/servicos#letreiros" },
+    { name: "Adesivação de Veículos", href: "/servicos#veiculos" },
+    { name: "Sinalização", href: "/servicos#sinalizacao" },
+    { name: "Painéis Digitais", href: "/servicos#digitais" }
+  ],
+  company: [
+    { name: "Sobre Nós", href: "/sobre-nos" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Contato", href: "/contato" },
+    { name: "Orçamento", href: "/orcamento" }
+  ]
+};
+
+const socialLinks = [
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" }
+];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Main Footer */}
+      <div className="container-responsive section-padding-small">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-yellow-400 mb-4">Mr. Machado</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed font-light">
-              Especialistas em comunicação visual há mais de 15 anos. Transformamos ideias em soluções visuais que fazem seu negócio se destacar em Jaboti e região.
-            </p>
+            <Link href="/" className="inline-block mb-6">
+              <div className="text-2xl sm:text-3xl font-light">
+                <span className="font-bold">Mr. Machado</span>
+                <div className="text-xs sm:text-sm font-normal text-gray-400 tracking-wider">
+                  COMUNICAÇÃO VISUAL
+                </div>
+              </div>
+            </Link>
             
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-yellow-400" />
-                <span className="text-gray-300">Jaboti, Paraná</span>
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-md">
+              Transformando ideias em soluções visuais impactantes há mais de 15 anos. 
+              Especialistas em comunicação visual em Jaboti e região.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <a 
+                href="tel:+5543998088888"
+                className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
+              >
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm sm:text-base">(43) 99808-8888</span>
+              </a>
+              
+              <a 
+                href="mailto:contato@mrmachado.com.br"
+                className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
+              >
+                <Mail className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm sm:text-base">contato@mrmachado.com.br</span>
+              </a>
+              
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPin className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm sm:text-base">Jaboti - PR</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-yellow-400" />
-                <a href="tel:+5543998088888" className="text-gray-300 hover:text-white transition-colors">
-                  (43) 99808-8888
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-yellow-400" />
-                <a href="mailto:contato@mrmachado.com.br" className="text-gray-300 hover:text-white transition-colors">
-                  contato@mrmachado.com.br
-                </a>
-              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Nossos Serviços</h4>
-            <ul className="space-y-2">
-              <li>
-                <WhatsAppButton
-                  message="Olá! Gostaria de saber mais sobre Fachadas."
-                  source="footer-fachadas"
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
-                >
-                  Fachadas
-                </WhatsAppButton>
-              </li>
-              <li>
-                <WhatsAppButton
-                  message="Olá! Gostaria de saber mais sobre Letreiros Luminosos."
-                  source="footer-letreiros"
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
-                >
-                  Letreiros Luminosos
-                </WhatsAppButton>
-              </li>
-              <li>
-                <WhatsAppButton
-                  message="Olá! Gostaria de saber mais sobre Placas e Banners."
-                  source="footer-placas"
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
-                >
-                  Placas e Banners
-                </WhatsAppButton>
-              </li>
-              <li>
-                <WhatsAppButton
-                  message="Olá! Gostaria de saber mais sobre Adesivos."
-                  source="footer-adesivos"
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
-                >
-                  Adesivos
-                </WhatsAppButton>
-              </li>
-              <li>
-                <WhatsAppButton
-                  message="Olá! Gostaria de saber mais sobre Personalização de Veículos."
-                  source="footer-veiculos"
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
-                >
-                  Veículos
-                </WhatsAppButton>
-              </li>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Serviços</h3>
+            <ul className="space-y-2 sm:space-y-3">
+              {footerLinks.services.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Acesso Rápido</h4>
-            <div className="space-y-4">
-              <WhatsAppButton
-                message="Olá! Gostaria de solicitar um orçamento."
-                source="footer-orcamento"
-                className="bg-green-600 hover:bg-green-700 text-white w-full py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
-              >
-                <MessageCircle className="mr-2 h-4 w-4" />
-                Orçamento Rápido
-              </WhatsAppButton>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Empresa</h3>
+            <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              {footerLinks.company.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-              <div className="flex space-x-4">
-                <a 
-                  href="https://instagram.com/mrmachadocv" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 p-3 rounded-lg transition-all duration-300"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a 
-                  href="#" 
-                  className="bg-blue-600 hover:bg-blue-700 p-3 rounded-lg transition-colors"
-                >
-                  <Facebook className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonial */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="bg-gray-800 rounded-2xl p-6">
-            <div className="text-center">
-              <p className="text-lg text-gray-300 italic mb-4 font-light">
-                &ldquo;Excelente trabalho! Fizeram a fachada da minha loja e o resultado superou minhas expectativas. Recomendo muito!&rdquo;
-              </p>
-              <p className="text-yellow-400 font-semibold">
-                - Maria Silva, Proprietária da Boutique Elegance
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm font-light">
-              © {currentYear} Mr. Machado Comunicação Visual. Todos os direitos reservados.
-            </div>
-            <div className="text-gray-400 text-sm mt-4 md:mt-0 font-light">
-              Desenvolvido com ❤️ em Jaboti, PR
-            </div>
+            {/* WhatsApp CTA */}
+            <WhatsAppButton
+              message="Olá! Vim através do site e gostaria de mais informações."
+              source="footer"
+              className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition-colors flex items-center justify-center text-sm sm:text-base"
+            >
+              <MessageCircle className="mr-2 h-4 w-4" />
+              WhatsApp
+            </WhatsAppButton>
           </div>
         </div>
       </div>
 
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <WhatsAppButton
-          message="Olá! Vim através do site e gostaria de mais informações."
-          source="botao-flutuante"
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </WhatsAppButton>
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="container-responsive py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-gray-400 text-sm sm:text-base text-center sm:text-left">
+              © {currentYear} Mr. Machado Comunicação Visual. Todos os direitos reservados.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-xs sm:text-sm text-gray-400">
+              <Link href="/politica-privacidade" className="hover:text-white transition-colors">
+                Política de Privacidade
+              </Link>
+              <Link href="/termos-uso" className="hover:text-white transition-colors">
+                Termos de Uso
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
