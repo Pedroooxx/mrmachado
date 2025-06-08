@@ -167,7 +167,7 @@ export default function About() {
           <WhatsAppButton
             message="Olá! Gostaria de conhecer mais sobre a empresa e discutir um projeto."
             source="sobre-cta"
-            className="btn-primary bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black"
+            className="btn-primary mx-auto bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black"
           >
             Falar com Especialista
           </WhatsAppButton>
