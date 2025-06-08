@@ -11,7 +11,7 @@ const portfolioItems = [
     title: "Fachada Moderna",
     subtitle: "Restaurante Premium",
     category: "fachadas",
-    image: "/api/placeholder/800/800",
+    image: "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800&h=800&fit=crop&crop=center",
     description: "Transformação completa com materiais de primeira linha",
     year: "2024",
     metrics: { area: "120m²", prazo: "15 dias" }
@@ -21,7 +21,7 @@ const portfolioItems = [
     title: "Letreiro Luminoso",
     subtitle: "Farmácia Central",
     category: "letreiros",
-    image: "/api/placeholder/800/800",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=800&fit=crop&crop=center",
     description: "Sistema de iluminação LED de alta eficiência",
     year: "2024",
     metrics: { altura: "3m", consumo: "50% menor" }
@@ -31,7 +31,7 @@ const portfolioItems = [
     title: "Frota Corporativa",
     subtitle: "Delivery Express",
     category: "veiculos",
-    image: "/api/placeholder/800/800",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=800&fit=crop&crop=center",
     description: "Identidade visual impactante para toda frota",
     year: "2023",
     metrics: { veiculos: "15", alcance: "+200%" }
@@ -41,7 +41,7 @@ const portfolioItems = [
     title: "Sinalização Premium",
     subtitle: "Shopping Center",
     category: "placas",
-    image: "/api/placeholder/800/800",
+    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=800&fit=crop&crop=center",
     description: "Sistema completo de wayfinding e identidade",
     year: "2023",
     metrics: { placas: "50+", areas: "3 pisos" }
