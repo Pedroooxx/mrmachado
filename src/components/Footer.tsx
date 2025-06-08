@@ -40,7 +40,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-6">
               <div className="relative h-10 w-40 md:h-12 md:w-48 mb-4">
                 <Image
-                  src="/logo.png"
+                  src="/logo-dark.png"
                   alt="Mr. Machado Comunicação Visual Logo"
                   layout="fill"
                   objectFit="contain"
