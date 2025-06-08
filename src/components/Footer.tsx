@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, MessageCircle } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -37,11 +38,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <div className="text-2xl sm:text-3xl font-light">
-                <span className="font-bold">Mr. Machado</span>
-                <div className="text-xs sm:text-sm font-normal text-gray-400 tracking-wider">
-                  COMUNICAÇÃO VISUAL
-                </div>
+              <div className="relative h-10 w-40 md:h-12 md:w-48 mb-4">
+                <Image
+                  src="/logo.png"
+                  alt="Mr. Machado Comunicação Visual Logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
               </div>
             </Link>
             

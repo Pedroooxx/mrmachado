@@ -2,19 +2,35 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Instagram, Mail, Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  return (    <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-800">
+  return (
+    <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-800">
       {/* Main Header */}
       <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl sm:text-2xl font-light text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-            <span className="font-bold">Mr. Machado</span>
-            <span className="block text-xs font-normal text-gray-600 dark:text-gray-400 tracking-wider">COMUNICAÇÃO VISUAL</span>
+            <div className="relative h-10 w-40 md:h-12 md:w-48">
+              <Image
+                src="/logo.png"
+                alt="Mr. Machado Comunicação Visual Logo"
+                layout="fill"
+                objectFit="contain"
+                className="block dark:hidden"
+              />
+              <Image
+                src="/logo-dark.png"
+                alt="Mr. Machado Comunicação Visual Logo Dark"
+                layout="fill"
+                objectFit="contain"
+                className="hidden dark:block"
+              />
+            </div>
           </Link>
-            {/* Desktop Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8 xl:space-x-12">
             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
               Home
