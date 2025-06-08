@@ -3,10 +3,6 @@ import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle } from "lucide-
 import WhatsAppButton from "./WhatsAppButton";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,7 +12,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold text-yellow-400 mb-4">Mr. Machado</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed font-light">
               Especialistas em comunicação visual há mais de 15 anos. Transformamos ideias em soluções visuais que fazem seu negócio se destacar em Jaboti e região.
             </p>
             
@@ -128,7 +124,8 @@ export default function Footer() {
         {/* Testimonial */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="bg-gray-800 rounded-2xl p-6">
-            <div className="text-center">              <p className="text-lg text-gray-300 italic mb-4">
+            <div className="text-center">
+              <p className="text-lg text-gray-300 italic mb-4 font-light">
                 &ldquo;Excelente trabalho! Fizeram a fachada da minha loja e o resultado superou minhas expectativas. Recomendo muito!&rdquo;
               </p>
               <p className="text-yellow-400 font-semibold">
@@ -141,9 +138,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm">
-              © 2024 Mr. Machado Comunicação Visual. Todos os direitos reservados.
-            </div>            <div className="text-gray-400 text-sm mt-4 md:mt-0">
+            <div className="text-gray-400 text-sm font-light">
+              © {currentYear} Mr. Machado Comunicação Visual. Todos os direitos reservados.
+            </div>
+            <div className="text-gray-400 text-sm mt-4 md:mt-0 font-light">
               Desenvolvido com ❤️ em Jaboti, PR
             </div>
           </div>

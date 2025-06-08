@@ -8,46 +8,22 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1">
-                <Phone className="h-4 w-4" />
-                <span>(43) 99808-8888</span>
-              </div>
-              <div className="hidden sm:flex items-center space-x-1">
-                <Mail className="h-4 w-4" />
-                <span>contato@mrmachado.com.br</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <a href="https://instagram.com/mrmachadocv" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
-                <Instagram className="h-4 w-4" />
-              </a>
-              <span className="hidden sm:inline">Siga-nos nas redes sociais</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <header className="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-md bg-white/90">
       {/* Main Header */}
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            Mr. Machado
-            <span className="block text-sm font-normal text-gray-600">Comunicação Visual</span>
+          <Link href="/" className="text-2xl font-light text-gray-900 hover:text-blue-600 transition-colors">
+            <span className="font-bold">Mr. Machado</span>
+            <span className="block text-xs font-normal text-gray-600 tracking-wider">COMUNICAÇÃO VISUAL</span>
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex space-x-12">
             <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Home
             </Link>
             <Link href="/sobre-nos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Sobre Nós
+              Sobre
             </Link>
             <Link href="/servicos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Serviços
@@ -64,10 +40,10 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <a 
               href="tel:+5543998088888" 
-              className="hidden md:flex bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors items-center"
+              className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-colors items-center"
             >
               <Phone className="mr-2 h-4 w-4" />
-              Ligar Agora
+              (43) 99808-8888
             </a>
             
             {/* Mobile Menu Button */}
@@ -82,8 +58,8 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-4 pt-4">
+          <div className="lg:hidden mt-6 pb-6 border-t border-gray-200">
+            <nav className="flex flex-col space-y-6 pt-6">
               <Link 
                 href="/" 
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -96,7 +72,7 @@ export default function Header() {
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Sobre Nós
+                Sobre
               </Link>
               <Link 
                 href="/servicos" 
@@ -121,10 +97,10 @@ export default function Header() {
               </Link>
               <a 
                 href="tel:+5543998088888" 
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-colors flex items-center justify-center"
               >
                 <Phone className="mr-2 h-4 w-4" />
-                Ligar Agora
+                (43) 99808-8888
               </a>
             </nav>
           </div>
