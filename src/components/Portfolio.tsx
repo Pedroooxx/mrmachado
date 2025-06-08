@@ -81,13 +81,13 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section id="portfolio" className="section-padding bg-gray-50">
+    <section id="portfolio" className="section-padding bg-gray-50 dark:bg-gray-900">
       <div className="container-responsive">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-display-large font-light text-gray-900 mb-4 sm:mb-6 lg:mb-8">
+          <h2 className="text-display-large font-light text-gray-900 dark:text-white mb-4 sm:mb-6 lg:mb-8">
             <span className="font-bold">Portfolio</span>
           </h2>
-          <p className="text-body-large text-gray-600 max-w-2xl mx-auto font-light">
+          <p className="text-body-large text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-light">
             Conheça alguns dos nossos projetos mais marcantes e inovadores.
           </p>
         </div>
@@ -100,8 +100,8 @@ export default function Portfolio() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                 selectedCategory === category
-                  ? "bg-black text-white"
-                  : "bg-white text-gray-700 hover:bg-gray-900 hover:text-white border border-gray-200"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-white text-gray-700 hover:bg-gray-900 hover:text-white border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:border-gray-700"
               }`}
             >
               {category}
@@ -114,7 +114,7 @@ export default function Portfolio() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+              className="group bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -128,24 +128,24 @@ export default function Portfolio() {
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button
                       onClick={() => setSelectedItem(item)}
-                      className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                      className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600"
                     >
                       <Eye className="h-5 w-5" />
                     </button>
                   </div>
                 </div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+                  <span className="bg-white/90 backdrop-blur-sm text-gray-900 dark:bg-gray-700/90 dark:text-gray-100 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                     {item.category}
                   </span>
                 </div>
               </div>
               
               <div className="p-6 sm:p-8">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                   {item.description}
                 </p>
                 
@@ -153,7 +153,7 @@ export default function Portfolio() {
                   {item.features.map((feature, idx) => (
                     <span
                       key={idx}
-                      className="bg-gray-100 text-gray-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
+                      className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
                     >
                       {feature}
                     </span>
@@ -163,7 +163,7 @@ export default function Portfolio() {
                 <WhatsAppButton
                   message={`Olá! Vi o projeto "${item.title}" no portfolio e gostaria de saber mais.`}
                   source={`portfolio-${item.id}`}
-                  className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-full font-medium transition-colors text-sm sm:text-base"
+                  className="w-full bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black py-3 rounded-full font-medium transition-colors text-sm sm:text-base"
                 >
                   Solicitar Orçamento
                 </WhatsAppButton>
@@ -174,13 +174,13 @@ export default function Portfolio() {
 
         {/* Call to Action */}
         <div className="text-center mt-16 sm:mt-20 lg:mt-24">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-4 sm:mb-6">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 dark:text-white mb-4 sm:mb-6">
             Tem um projeto em mente?
           </h3>
           <WhatsAppButton
             message="Olá! Tenho um projeto de comunicação visual e gostaria de conversar."
             source="portfolio-cta"
-            className="btn-primary"
+            className="btn-primary bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black" // Added dark mode classes, assuming btn-primary might not cover it or needs override
           >
             Vamos Conversar
           </WhatsAppButton>
@@ -189,12 +189,12 @@ export default function Portfolio() {
 
       {/* Modal */}
       {selectedItem && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl sm:rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/80 dark:bg-black/90 z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="relative">
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-4 right-4 z-10 bg-white/90 text-gray-900 p-2 rounded-full hover:bg-white transition-colors"
+                className="absolute top-4 right-4 z-10 bg-white/90 text-gray-900 p-2 rounded-full hover:bg-white transition-colors dark:bg-gray-700/90 dark:text-gray-100 dark:hover:bg-gray-600"
               >
                 ×
               </button>
@@ -210,21 +210,21 @@ export default function Portfolio() {
             </div>
             <div className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                <span className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded-full text-sm">
                   {selectedItem.category}
                 </span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white mb-4">
                 {selectedItem.title}
               </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 {selectedItem.description}
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {selectedItem.features.map((feature, idx) => (
                   <span
                     key={idx}
-                    className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full"
+                    className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
                   >
                     {feature}
                   </span>
@@ -233,7 +233,7 @@ export default function Portfolio() {
               <WhatsAppButton
                 message={`Olá! Vi o projeto "${selectedItem.title}" no portfolio e gostaria de saber mais.`}
                 source={`portfolio-modal-${selectedItem.id}`}
-                className="w-full btn-primary"
+                className="w-full btn-primary bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black" // Added dark mode classes
               >
                 Solicitar Orçamento Similar
               </WhatsAppButton>
